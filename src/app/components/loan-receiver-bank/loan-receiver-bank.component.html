@@ -1,3 +1,82 @@
-<p>
-  loan-receiver-bank works!
-</p>
+<div class="container">
+  <div class="col-md-10">
+
+
+    <section class="container my-3">
+      <div class="row mb-3">
+        <span>Prestapime</span>
+      </div>
+      <div class="row mb-3">
+        <h6>Ya falta poco para recibir tu préstamo!</h6>
+      </div>
+      <div class="row d-sm-flex justify-content-around">
+        <div class="col-12 col-sm-3 ">
+          <div class="row">
+            <div class="col-12">
+              <span>Cuota</span>
+            </div>
+            <div class="col-12 bg-resume-loan rounded">
+              <div class="row"><span>S/ 377.78</span></div>
+              <div class="row"><small>mensuales</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 ">
+          <div class="row">
+            <div class="col-12">
+              <span>Resumen del préstamo</span>
+            </div>
+            <div class="row bg-resume-loan rounded">
+              <div class="col-3">
+                <div class="row">Préstamo</div>
+                <div class="row">10,000</div>
+              </div>
+              <div class="col-1"> + </div>
+              <div class="col-3">
+                <div class="row">Intereses</div>
+                <div class="row">360</div>
+              </div>
+              <div class="col-1"> = </div>
+
+              <div class="col-3">
+                <div class="row">Total a pagar</div>
+                <div class="row">13,600</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <form>
+            <div class="form-group">
+              <span>Datos</span>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Banco</label>
+                <select [(ngModel)]="bankSelect"  class="form-control" name="" >
+                  <option *ngFor="let bank of banks" [value]="bank" [data-cant]="bank.numbers">{{bank.name}}</option>
+                </select>
+                <small  class="form-text text-muted" >small</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Ingresa el N° de cuenta donde se depositara tu prestamo</label>
+                <input  [(ngModel)]="numberCount" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el N° de cuenta ">
+                <small id="emailHelp" class="form-text text-muted" >small</small>
+              </div>            
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Acepto <a href="">compartir los datos de ventas de Visanet con la entidad financiera</a> </label>
+             
+              </div>
+              <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Acepto <a href="#">Terminos y condiciones</a></label>
+                </div>
+              <button (click)="validateForm()" type="submit" class="btn btn-primary">Recibir mi prestamo</button>
+            </form>
+      </div>
+    </section>
+
+
+  </div>
+</div>
