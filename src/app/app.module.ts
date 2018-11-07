@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CalculateLoanComponent } from './components/calculate-loan/calculate-loan.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    CalculateLoanComponent
+    CalculateLoanComponent,
+
   ],
   imports: [
     BrowserModule
