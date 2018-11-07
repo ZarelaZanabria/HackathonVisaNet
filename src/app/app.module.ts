@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CalculateLoanComponent } from './components/calculate-loan/calculate-loan.component';
@@ -14,7 +15,8 @@ import { MyNavComponent } from './components/my-nav/my-nav.component';
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
