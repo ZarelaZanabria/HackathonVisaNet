@@ -1,10 +1,10 @@
-<div class="card mt-5">
-  <div class="container">
-    <div class="row ">
-      <h3 class="col-sm-12 text-center">INGRESA TUS DATOS</h3>
-      <form class="col-sm-12" name="form" (ngSubmit)="f.form.valid && onSubmit(check1,check2)" #f="ngForm" novalidate>
-        <div class="row justify-content-lg-center justify-content-lg-center">
-          <div class="form-group col-sm-3">
+<div class="container mt-5">
+  <h5 class="text-center font-weight-bold mb-5">INGRESA TUS DATOS</h5>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit(check1,check2)" #f="ngForm" novalidate>
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <label for="nameClient">NOMBRE:</label>
             <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="nameClient"
               #nameClient="ngModel" [(ngModel)]="model.nameClient" [ngClass]="{ 'is-invalid': f.submitted && nameClient.invalid }"
@@ -14,7 +14,7 @@
               <div *ngIf="nameClient.errors.pattern">Solo se debe ingresar letras</div>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <label for="apellClient">APELLIDO:</label>
             <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="apellClient"
               #apellClient="ngModel" [(ngModel)]="model.apellClient" [ngClass]="{ 'is-invalid': f.submitted && apellClient.invalid }"
@@ -25,10 +25,10 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-lg-center">
-          <div class="form-group col-sm-3">
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <div class="form-group">
-              <label class="dni" for="exampleCheck1">DNI : </label>
+              <label class="dni" for="exampleCheck1">DNI: </label>
               <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="dni" #dni="ngModel"
                 minlength="8" maxlength="8" [(ngModel)]="model.dni" [ngClass]="{'is-invalid': f.submitted && dni.invalid}"
                 pattern="[0-9]{8,8}" required>
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <div class="form-group">
               <label class="ruc" for="exampleCheck1">RUC: </label>
               <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="ruc" #ruc="ngModel"
@@ -51,8 +51,8 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-lg-center">
-          <div class="form-group col-sm-3">
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <div class="form-group">
               <label for="email">EMAIL : </label>
               <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" email
@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <div class="form-group">
               <label for="password">PASSWORD:</label>
               <input type="password" class="form-control border-top-0 border-right-0 border-left-0" name="password"
@@ -76,8 +76,8 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-lg-center">
-          <div class="form-group col-sm-3">
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <div class="form-group">
               <label class="phone" for="exampleCheck1">CELULAR: </label>
               <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="phone" #phone="ngModel"
@@ -89,7 +89,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <div class="form-group">
               <label for="rubroNegocio">RUBRO DE NEGOCIO:</label>
               <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="rubroNegocio"
@@ -101,8 +101,8 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-lg-center">
-          <!-- <div class="form-group form-check col-sm-3">
+        <div class="row justify-content-around">
+          <!-- <div class="form-group form-check col-sm-5">
             <label for="exampleInputEmail1" class="m-0">Ingresa el N° de cuenta donde se depositara tu prestamo</label>
             <small id="emailHelp" class="form-text text-success" *ngIf="cant">debería tener {{cant[0]['numbers']}}
               digítos, ejem: {{cantRecomeded}}</small>
@@ -114,7 +114,7 @@
               </div>
             </div>
           </div> -->
-          <!-- <div class="form-group col-sm-3">
+          <!-- <div class="form-group col-sm-5">
             <label for="exampleInputPassword1">Banco</label>
             <select [(ngModel)]="bankSelect" class="form-control" name="selectBank" #selectBank (change)="checkoutCant()">
               <option value="Selecciona tu banco" disabled>Selecciona tu banco</option>
@@ -126,10 +126,9 @@
               </div>
             </div>
           </div> -->
-
         </div>
-        <div class="row justify-content-lg-center">
-          <div class="form-group col-sm-3">
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <div class="form-group" *ngIf="!clientVn">
               <label class="codClient" for="exampleCheck1">CÓDIGO DE CLIENTE VISANET: </label>
               <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="codClient"
@@ -141,22 +140,22 @@
               </div>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" (change)="notClient()">
               <label class="form-check-label" for="exampleCheck1">NO SOY CLIENTE VISANET</label>
             </div>
           </div>
         </div>
-        <div class="row justify-content-lg-center">
-          <div class="form-group col-sm-3">
+        <div class="row justify-content-around">
+          <div class="form-group col-sm-5">
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" #check1>
               <label class="form-check-label" for="exampleCheck1">Acepto <a href="">compartir los datos de ventas de
                   Visanet con la entidad financiera</a> </label>
             </div>
           </div>
-          <div class="form-group col-sm-3">
+          <div class="form-group col-sm-5">
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" #check2>
               <label class="form-check-label" for="exampleCheck1">Acepto <a href="#">Terminos y condiciones</a></label>
