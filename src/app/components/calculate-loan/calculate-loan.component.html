@@ -1,14 +1,7 @@
 <div class="container my-5">
 
   <p class="title">Calcula tu préstamo</p>
-  <div class="row">
-      <div class="col-3">
-        <label for="ruc">Escribe tu ruc</label>
-        <input class="input-group col-12" id="ruc" type="number" placeholder="RUC">
-        <label for="visa">o código de cliente VISA</label>
-        <input class="input-group col-12" id="visa" type="number" placeholder="CODIGO VISA">
-    </div>
-  </div>
+
   <div class="container mb-4">
     <div class="row justify-content-around border-grey py-3">
       <div class="col-md-3">
@@ -38,8 +31,22 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="row">
+    <div class="col-6 offset-lg-1">
+
+      <div class="input-group mb-3">
+        <p>Ingresa tu DNI para poder mostrar la tarifa mensual que te ofrecen los bancos:</p>
+        <input class="input-group col-6" id="visa" type="number" placeholder="DNI">
+
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="showBank()">Ingresar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<div *ngIf="showBanks" class="container">
   <app-bank *ngFor="let bank of arrayBanks; let i = index" (activeSecondStep)="emmitSecondStep()" [element]="bank"
-  [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3"></app-bank>
+    [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3"></app-bank>
 
 </div>

@@ -8,6 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 
 export class CalculateLoanComponent implements OnInit {
+  showBanks: boolean= false;
   countryForm: FormGroup;
   public time = [12, 24, 36, 48, 60]
   @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
@@ -25,7 +26,7 @@ export class CalculateLoanComponent implements OnInit {
     { name: 'CAJA HUANCAYO', img: '', tcea: 20 },
   ]
 
-  constructor() {  }
+  constructor() { }
 
   ngOnInit() {
     this.timeSelector = 12;
@@ -39,16 +40,19 @@ export class CalculateLoanComponent implements OnInit {
 
   subtract() {
     this.cash = this.cash - this.cashNumber
- 
+
   }
-   sort(){
-    this.arrayBanks = this.arrayBanks.sort((a, b) => a.tcea - b.tcea );
+  sort() {
+    this.arrayBanks = this.arrayBanks.sort((a, b) => a.tcea - b.tcea);
     console.log(this.arrayBanks);
-   }
+  }
 
   emmitSecondStep() {
     this.activeSecondStep.emit({
       item: 'stepTwo',
     });
+  }
+  showBank() {
+    this.showBanks = true;
   }
 }

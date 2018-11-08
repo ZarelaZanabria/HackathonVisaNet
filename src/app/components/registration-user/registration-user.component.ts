@@ -78,14 +78,10 @@ export class RegistrationUserComponent implements OnInit {
     this.model.banco = this.bankSelect;
 
     console.log(this.model);
-    if (!this.numberAccount) this.noneAccount = true;
+  
     if (!value1.checked || !value2.checked) this.noneConditions = true;
-    if (!this.bankSelect) this.noneBank = true;
-    if (/^([0-9])+$/g.test(this.numberAccount) && this.numberAccount.length === this.cant[0]['numbers'] && value1.value && value2) {
-      this.validateForm()
-    } else {
-      this.validAccount = false;
-    }
+    if(value1.checked && value2.checked)  this.validateForm();
+   
 
   }
 }

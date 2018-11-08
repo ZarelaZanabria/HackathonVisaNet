@@ -1,44 +1,30 @@
 <div class="text-center mt-5">
-  <strong>HOLA EMPRENDEDORA,</strong><br>
-  Te otorgamos un préstamo para que puedas seguir creciendo<br>
+  <h3 class="font-weight-bold">HOLA EMPRENDEDORA,</h3>
+  <h5 class="font-weight-bold">Te otorgamos un préstamo para que puedas seguir creciendo</h5>
+  <!-- Steps -->
   <div class="container mt-5">
-    <div class="col-lg-6 offset-lg-3" style="margin-left:30%;">
-      <div class="row">
-
-        <div class="col-lg-4">
-
-          <div class="row col-lg-7">
-            <div class="dot" [ngClass]="{ 'bg-none': s1 === false, 'bg-pink': s1 }"><i *ngIf="s1===true" class="fas fa-check"></i><span
-                *ngIf="!s1" class="align-items-center align-middle">1</span></div>
-            <small class="txt ">Calcula tu préstamo</small>
-          </div>
-
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="py-3 dot" [ngClass]="{ 'bg-none': s1 === false, 'bg-pink': s1 }">
+          <i *ngIf="s1 === true" class="fas fa-check"></i>
+          <span *ngIf="!s1">1</span>
         </div>
-
-        <div class="col-lg-4">
-
-          <div class="row col-lg-7">
-            <span class="dot" [ngClass]="{ 'bg-none': s2 === false, 'bg-pink': s2 }"><i *ngIf="s2===true" class="fas fa-check"></i><span
-                *ngIf="!s2" class="align-items-center align-middle">2</span></span>
-            <small class="txt col-lg-12">Ingresa tus datos</small>
-
-          </div>
-
+        <p class="font-size-mini mt-2">Calcula tu <br> préstamo</p>
+      </div>
+      <div class="col-auto">
+        <div class="py-3 dot" [ngClass]="{ 'bg-none': s2 === false, 'bg-pink': s2 }">
+          <i *ngIf="s2 === true" class="fas fa-check"></i>
+          <span *ngIf="!s2">2</span>
         </div>
-
-        <div class="col-lg-4">
-
-          <div class="row col-lg-7">
-            <span class="dot" [ngClass]="{ 'bg-none': s3 === false, 'bg-pink': s3 }"><i *ngIf="s3===true" class="fas fa-check"></i><span
-                *ngIf="!s3" class="align-items-center align-text-bottom">3</span></span>
-            <small class="txt col-lg-12">Envío de préstamo</small>
-          </div>
-
+        <p class="font-size-mini mt-2">Ingresa <br> tus datos</p>
+      </div>
+      <div class="col-auto">
+        <div class="py-3 dot" [ngClass]="{ 'bg-none': s3 === false, 'bg-pink': s3 }">
+          <i *ngIf="s3 === true" class="fas fa-check"></i>
+          <span *ngIf="!s3">3</span>
         </div>
-
+        <div class="font-size-mini mt-2">Envío de <br> préstamo</div>
       </div>
     </div>
   </div>
-
-
 </div>
