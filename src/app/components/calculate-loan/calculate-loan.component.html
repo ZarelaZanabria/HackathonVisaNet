@@ -3,10 +3,12 @@
   <div class="row justify-content-between">
     <div class="col-md-3">
       <p>¿Cuánto dinero necesitas?</p>
-      <div class="row justify-content-between">
-        <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
-        <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
-        <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
+          <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
+          <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+        </div>
       </div>
     </div>
     <div class="col-md-2">
