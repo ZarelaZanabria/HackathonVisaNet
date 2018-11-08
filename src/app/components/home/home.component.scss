@@ -1,28 +1,36 @@
-.card {
-  border: none;
-  margin-top: 1%;
+$primary-color: #C50A5B;
+$secondary-color: #f9cd09;
+$color-grey: #F1F2F4;
 
-  .card-body {
-    background-color: #C50A5B;
-    margin-left: 0%;
-    
-    .card-title {
-      color: #F9CD0A ;
-    }
+.bg-fucsia {
+  background: $primary-color;
+}
 
-    .card-text {
-      color: white;
-    }
-  }
+.sub-title {
+  color: $secondary-color;
+}
 
-  .card-img {
-    width: 50%;
-    height: 75vh;
-    margin-top: 1%;
-  }
+.paragraph {
+  color: #ffffff;
+}
 
-  .btn {
-    background-color: #C50A5B;
-    border-color: #F9CD0A ;
-  }
+.btn-yellow {
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+}
+
+.parent {
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+}
+
+.parent > .child {
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
 }
