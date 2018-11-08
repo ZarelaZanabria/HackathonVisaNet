@@ -17,7 +17,7 @@ export class CalculateLoanComponent implements OnInit {
   private tcea: number = 0.12;
   private fee: number = 0;
   private interest: number = 0;
-  private totalToPay: number;
+  private totalToPay: number; 
   public arrayBanks: any=  [
     { name: 'PRESTAMYPE', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 12 },
     { name: 'CAJA HUANCAYO', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 20 },
