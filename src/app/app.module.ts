@@ -29,7 +29,7 @@ import { InfoComponent } from './components/info/info.component';
         MyNavComponent,
         HomeComponent,
         StepsComponent,
-        LoanComponent,
+        LoanComponent,   
         ContainerSectionsComponent,
         LoanReceiverBankComponent,
         RegistrationUserComponent,
