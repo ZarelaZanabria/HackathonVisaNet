@@ -15,8 +15,10 @@ import { RegistrationUserComponent } from './components/registration-user/regist
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { BankComponent } from './components/bank/bank.component';
+// import { BankComponent } from './components/bank/bank.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { BankComponent } from './components/bank/bank.component';
+import { InfoComponent } from './components/info/info.component';
 
 
 
@@ -33,6 +35,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
         RegistrationUserComponent,
         BankComponent,
         ContactsComponent,
+        InfoComponent,
+
+
     ],
     imports: [
         BrowserModule,

@@ -5,5 +5,7 @@
 </ng-container>
 <ng-container *ngIf="stepTwo && !stepThree">
   <app-registration-user (activeSecondStep)="activeStep($event)"></app-registration-user>
-</ng-container> -->
-<app-contacts></app-contacts>
+</ng-container>
+<ng-container *ngIf="stepThree">
+  <app-info (activeSecondStep)="activeStep($event)"></app-info>
+</ng-container>
