@@ -1,0 +1,28 @@
+.card {
+  border: none;
+  margin-top: 1%;
+
+  .card-body {
+    background-color: #C50A5B;
+    margin-left: 0%;
+    
+    .card-title {
+      color: orangered;
+    }
+
+    .card-text {
+      color: white;
+    }
+  }
+
+  .card-img {
+    width: 50%;
+    height: 75vh;
+    margin-top: 1%;
+  }
+
+  .btn {
+    background-color: #C50A5B;
+    border-color: orangered;
+  }
+}
