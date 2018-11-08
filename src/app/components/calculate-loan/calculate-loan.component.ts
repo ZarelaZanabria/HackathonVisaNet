@@ -21,7 +21,7 @@ export class CalculateLoanComponent implements OnInit {
   public arrayBanks: any = [
     { name: 'PRESTAMYPE', img: '', tcea: 12 },
     { name: 'BCP', img: '', tcea: 20 },
-    { name: 'CAJA AREQUIPA', img: '', tcea: 25 }
+    { name: 'CAJA AREQUIPA', img: '', tcea: 25 },
     { name: 'CAJA HUANCAYO', img: '', tcea: 20 },
   ]
 

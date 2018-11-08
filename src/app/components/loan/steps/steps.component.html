@@ -1,15 +1,54 @@
 <div class="text-center mt-5">
   <strong>HOLA EMPRENDEDORA,</strong><br>
   Te otorgamos un préstamo para que puedas seguir creciendo<br>
-  <span class="dot" [ngClass]="{ 'bg-none': s1 === false, 'bg-pink': s1 }"><i *ngIf="s1===true" class="fas fa-check"></i><span *ngIf="!s1" class="align-items-center">1</span></span>
-  <span class="dot" [ngClass]="{ 'bg-none': s2 === false, 'bg-pink': s2 }"><i *ngIf="s2===true" class="fas fa-check"></i><span  *ngIf="!s2"  class="align-items-center">2</span></span>
-  <span class="dot" [ngClass]="{ 'bg-none': s3 === false, 'bg-pink': s3 }"><i *ngIf="s3===true" class="fas fa-check"></i><span *ngIf="!s3"  class="align-items-center">3</span></span>
-</div>
-<div style="margin-left: 37%;">
+  <div class="container mt-5">
+    <div class="col-lg-6 offset-lg-3" style="margin-left:30%;">
+      <div class="row">
 
-  <small class="txt align-items-center">Calcula tu <br>préstamo</small>
-  <small class="txt align-items-center">Ingresa tus <br>datos</small>
-  <small class="txt align-items-center">Recibe tu<br>préstamo</small>
+        <div class="col-lg-4">
 
+          <div class="row col-lg-7">
+            <div class="dot" [ngClass]="{ 'bg-none': s1 === false, 'bg-pink': s1 }"><i *ngIf="s1===true"
+                class="fas fa-check"></i><span *ngIf="!s1" class="align-items-center">1</span></div>
+            <small class="txt ">Calcula tu préstamo</small>
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="row col-lg-7">
+            <span class="dot" [ngClass]="{ 'bg-none': s2 === false, 'bg-pink': s2 }"><i *ngIf="s2===true"
+                class="fas fa-check"></i><span *ngIf="!s2" class="align-items-center">2</span></span>
+            <small class="txt col-lg-12">Ingresa tus datos</small>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="row col-lg-7">
+            <span class="dot" [ngClass]="{ 'bg-none': s3 === false, 'bg-pink': s3 }"><i *ngIf="s3===true"
+                class="fas fa-check"></i><span *ngIf="!s3" class="align-items-center">3</span></span>
+            <small class="txt col-lg-12">Envío de préstamo</small>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div style="margin-left: 37%;">
+
+
+
+
+
+
+  </div>
 
 </div>
