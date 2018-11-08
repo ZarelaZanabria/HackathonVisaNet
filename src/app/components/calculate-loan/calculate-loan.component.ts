@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -10,10 +10,9 @@ import { FormGroup } from '@angular/forms';
 export class CalculateLoanComponent implements OnInit {
   countryForm: FormGroup;
   // tslint:disable-next-line:max-line-length
-  private time = [12 ,  24,  36 , 48,60]
-//  private time = [12, 13]
-  @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();
-  private timeSelector: any;
+  private time = [12, 24, 36, 48, 60]
+  @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
+  private timeSelector: number;
   private cash: number = 10000;
   private cashNumber: number = 1000;
   private tcea: number = 0.12;
@@ -21,36 +20,36 @@ export class CalculateLoanComponent implements OnInit {
   private interest: number = 0;
   private totalToPay: number;
 
-  constructor() {
-   
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.timeSelector =  12;
+    this.timeSelector = 12;
     this.calculateFee()
   }
 
-  add () {
+  add() {
     this.cash = this.cash + this.cashNumber
     if (this.timeSelector) {
       this.calculateFee()
     }
   }
 
-  subtract () {
+  subtract() {
     this.cash = this.cash - this.cashNumber
     if (this.timeSelector) {
       this.calculateFee()
     }
   }
 
-  calculateFee () {
-    let year = this.timeSelector/12
+  calculateFee() {
+    let year = this.timeSelector / 12
     this.interest = this.cash * this.tcea * year
     this.totalToPay = this.cash + this.interest
-    this.fee = this.totalToPay/this.timeSelector
+    this.fee = this.totalToPay / this.timeSelector
   }
+
   emmitSecondStep() {
+    console.log(this.timeSelector, this.cash);
     this.activeSecondStep.emit({
       item: 'stepTwo',
       time: this.timeSelector,

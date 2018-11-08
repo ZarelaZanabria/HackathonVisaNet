@@ -1,0 +1,52 @@
+$primary-color: #C50A5B;
+$secondary-color: #f9cd09;
+$color-grey: #F1F2F4;
+
+.bg-grey {
+    background: $color-grey;
+}
+
+.border-grey {
+    border: 1px solid $color-grey;
+}
+
+.border-yellow {
+    border: 1px solid $secondary-color;
+}
+
+.border-bank {
+    border-top: 2px solid $secondary-color;
+    border-right: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+    border-left: 10px solid $secondary-color;
+}
+
+.box-grey {
+    background: $color-grey;
+    border-radius: 5px;
+}
+
+.b-plus-less {
+    background: $secondary-color;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 33px;
+    height: 50px;
+}
+
+.color-secondary {
+    color: $secondary-color;
+}
+
+.font-size-cash {
+    font-size: 20px;
+}
+
+.font-size-midi {
+    font-size: 12px
+}
+
+.font-size-mini {
+    font-size: 11px
+}
