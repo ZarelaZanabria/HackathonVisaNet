@@ -1,69 +1,30 @@
-<div class="container mb-5 pb-5">
+<div class="container my-5">
   <p class="title">Calcula tu préstamo</p>
-  <div class="row justify-content-between">
-    <div class="col-md-3">
-      <p>¿Cuánto dinero necesitas?</p>
-      <div class="container">
-        <div class="row justify-content-between">
-          <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
-          <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
-          <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+  <div class="container mb-4">
+    <div class="row justify-content-around border-grey py-3">
+      <div class="col-md-3">
+        <!-- <p>BUSQUEDA</p> -->
+        <p>Filtrar por entidad bancaria:</p>
+        <div class="border-yellow">
+          <p class="ml-4 mt-3"><i class="fas fa-search mr-1"></i>ENTIDAD</p>
         </div>
       </div>
-    </div>
-    <div class="col-md-2">
-      <p>¿Cuánto tiempo?</p>
-      <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
-        <option *ngFor="let item of time" [value]="item">{{item}} meses</option>
-      </select> 
-    </div>
-    <div class="col-md-2">
-      <p>Debo pagar</p>
-      <p class="font-size-pay font-weight-bold">S/ {{fee.toFixed(2)}}</p>
-      <p>Mensuales</p>
-    </div>
-    <div class="col-md-3">
-      <p>Resumen de pago</p>
-      <div class="row box-grey">
-        <div class="row">
-          <div class="col-3">
-            <p class="font-size-summary font-weight-bold">Préstamo</p>
-          </div>
-          <div class="col-3 offset-1">
-            <p class="font-size-summary font-weight-bold">Intereses</p>
-          </div>
-          <div class="col-5">
-            <p class="font-size-summary font-weight-bold">Total a Pagar</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3">
-            <p>{{cash}}</p>
-          </div>
-          <div class="col-1">+</div>
-          <div class="col-3">
-            <p>{{interest}}</p>
-          </div>
-          <div class="col-1">=</div>
-          <div class="col-3">
-            <p>{{totalToPay}}</p>
+      <div class="col-md-3">
+        <p>¿Cuánto dinero necesitas?</p>
+        <div class="container">
+          <div class="row justify-content-between">
+            <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
+            <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
+            <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- 
-  interes = cash * tcea * (timeSelector/12)
-  total a pagar= cash + (this.cash * tcea * (timeSelector/12))
-  mensual = cash + (this.cash * tcea * (timeSelector/12))/timeSelector -->
-
-  <div class="row">
-    <div class="col-md-9">
-      <p>Préstamo basado en TCEA 12%</p>
-    </div>
-    <div class="col-md-3">
-      <p class="font-weight-bold">Ver cronograma</p>
-      <button type="button" (click)="emmitSecondStep()" class="btn btn-my-primary btn-apply-for">SOLICITAR</button>
+      <div class="col-md-3">
+        <p>¿Cuánto tiempo?</p>
+        <select [(ngModel)]="timeSelector" class="form-control">
+          <option *ngFor="let item of time" [value]="item">{{item}} meses</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>
