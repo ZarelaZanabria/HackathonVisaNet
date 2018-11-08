@@ -9,9 +9,7 @@ import { FormGroup } from '@angular/forms';
 
 export class CalculateLoanComponent implements OnInit {
   countryForm: FormGroup;
-  // tslint:disable-next-line:max-line-length
   private time = [12 ,  24,  36 , 48,60]
-//  private time = [12, 13]
   @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();
   private timeSelector: any;
   private cash: number = 10000;
@@ -20,6 +18,12 @@ export class CalculateLoanComponent implements OnInit {
   private fee: number = 0;
   private interest: number = 0;
   private totalToPay: number;
+  public arrayBanks: any=  [
+    { name: 'PRESTAMYPE', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 12 },
+    { name: 'CAJA HUANCAYO', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 20 },
+    { name: 'BCP', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 20 },
+    { name: 'CAJA AREQUIPA', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 25 }
+  ]
 
   constructor() {
    
@@ -58,4 +62,5 @@ export class CalculateLoanComponent implements OnInit {
     });
   }
 
+ 
 }

@@ -52,6 +52,11 @@
       </div>
     </div>
   </div>
+  <!-- 
+  interes = cash * tcea * (timeSelector/12)
+  total a pagar= cash + (this.cash * tcea * (timeSelector/12))
+  mensual = cash + (this.cash * tcea * (timeSelector/12))/timeSelector -->
+
   <div class="row">
     <div class="col-md-9">
       <p>Préstamo basado en TCEA 12%</p>
@@ -62,3 +67,8 @@
     </div>
   </div>
 </div>
+<div class="container">
+    
+        <app-bank *ngFor="let bank of arrayBanks; let i = index" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3" ></app-bank>
+      
+    </div>
