@@ -1,0 +1,49 @@
+$primary-color: #C50A5B;
+$secondary-color: #f9cd09;
+$bg-grey: #F1F2F4;
+
+.btn-my-primary {
+    background-color: $primary-color;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-apply-for {
+    font-size: 20px;
+    height: 60px;
+    width: 240px
+}
+
+.b-plus-less {
+    background: $secondary-color;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 33px;
+    height: 50px;
+}
+
+.box-grey {
+    background: $bg-grey;
+    border-radius: 5px;
+}
+
+.font-size-cash {
+    font-size: 20px;
+}
+
+.font-size-pay {
+    font-size: 33px;
+}
+
+.font-size-summary {
+    font-size: 12px;
+}
+
+.title {
+    color: $primary-color!important;
+    font-weight: 600;
+    font-size: 25px;
+}
+

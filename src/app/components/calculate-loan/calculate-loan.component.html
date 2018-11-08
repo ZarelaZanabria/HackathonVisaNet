@@ -1,5 +1,62 @@
-<p>
-  calculate-loan works!
-  paso 1
-  <input placeholder="nombre">
-</p>
+<div class="container">
+  <p class="title">Calcula tu préstamo</p>
+  <div class="row justify-content-between">
+    <div class="col-md-3">
+      <p>¿Cuánto dinero necesitas?</p>
+      <div class="row justify-content-between">
+        <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
+        <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
+        <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <p>¿Cuánto tiempo?</p>
+      <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
+        <option *ngFor="let item of time" [value]="item.value">{{item.label}}</option>
+      </select> 
+    </div>
+    <div class="col-md-2">
+      <p>Debo pagar</p>
+      <p class="font-size-pay font-weight-bold">S/ {{fee.toFixed(2)}}</p>
+      <p>Mensuales</p>
+    </div>
+    <div class="col-md-3">
+      <p>Resumen de pago</p>
+      <div class="row box-grey">
+        <div class="row">
+          <div class="col-3">
+            <p class="font-size-summary font-weight-bold">Préstamo</p>
+          </div>
+          <div class="col-3 offset-1">
+            <p class="font-size-summary font-weight-bold">Intereses</p>
+          </div>
+          <div class="col-5">
+            <p class="font-size-summary font-weight-bold">Total a Pagar</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <p>{{cash}}</p>
+          </div>
+          <div class="col-1">+</div>
+          <div class="col-3">
+            <p>{{interest}}</p>
+          </div>
+          <div class="col-1">=</div>
+          <div class="col-3">
+            <p>{{totalToPay}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <p>Préstamo basado en TCEA 12%</p>
+    </div>
+    <div class="col-md-3">
+      <p class="font-weight-bold">Ver cronograma</p>
+      <button type="button" class="btn btn-my-primary btn-apply-for">SOLICITAR</button>
+    </div>
+  </div>
+</div>
