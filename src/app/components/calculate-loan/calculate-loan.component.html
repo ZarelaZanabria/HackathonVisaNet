@@ -21,21 +21,12 @@
       </div>
       <div class="col-md-3">
         <p>¿Cuánto tiempo?</p>
-        <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
+        <select [(ngModel)]="timeSelector" class="form-control">
           <option *ngFor="let item of time" [value]="item">{{item}} meses</option>
         </select>
       </div>
     </div>
   </div>
-  <!-- <div class="row">
-    <div class="col-md-9">
-      <p>Préstamo basado en TCEA 12%</p>
-    </div>
-    <div class="col-md-3">
-      <p class="font-weight-bold text-end">Ver cronograma</p>
-      <button type="button" (click)="emmitSecondStep()" class="btn btn-my-primary btn-apply-for">SOLICITAR</button>
-    </div>
-  </div> -->
 </div>
 <div class="container">
   <app-bank *ngFor="let bank of arrayBanks; let i = index" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3"></app-bank>

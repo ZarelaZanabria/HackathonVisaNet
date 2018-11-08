@@ -1,19 +1,6 @@
 $primary-color: #C50A5B;
 $secondary-color: #f9cd09;
-$bg-grey: #F1F2F4;
-
-.btn-my-primary {
-    background-color: $primary-color;
-    border: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.btn-apply-for {
-    font-size: 20px;
-    height: 60px;
-    width: 240px
-}
+$color-grey: #F1F2F4;
 
 .b-plus-less {
     background: $secondary-color;
@@ -24,8 +11,15 @@ $bg-grey: #F1F2F4;
     height: 50px;
 }
 
+.border-bank {
+    border-top: 2px solid $color-grey;
+    border-right: 2px solid $color-grey;
+    border-bottom: 2px solid $color-grey;
+    border-left: 10px solid $color-grey;
+}
+
 .box-grey {
-    background: $bg-grey;
+    background: $color-grey;
     border-radius: 5px;
 }
 

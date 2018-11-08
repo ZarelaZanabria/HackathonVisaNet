@@ -19,41 +19,40 @@ export class CalculateLoanComponent implements OnInit {
   private interest: number = 0;
   private totalToPay: number;
   public arrayBanks: any = [
-    { name: 'PRESTAMYPE', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 12 },
-    { name: 'CAJA HUANCAYO', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 20 },
-    { name: 'BCP', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 20 },
-    { name: 'CAJA AREQUIPA', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpghttps://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Prestamype.jpg', tcea: 25 }
+    { name: 'PRESTAMYPE', img: '', tcea: 12 },
+    { name: 'BCP', img: '', tcea: 20 },
+    { name: 'CAJA AREQUIPA', img: '', tcea: 25 }
+    { name: 'CAJA HUANCAYO', img: '', tcea: 20 },
   ]
 
-  constructor() {
-
-  }
+  constructor() {  }
 
   ngOnInit() {
     this.timeSelector = 12;
-    this.calculateFee()
+    // this.calculateFee()
   }
 
   add() {
     this.cash = this.cash + this.cashNumber
-    if (this.timeSelector) {
-      this.calculateFee()
-    }
+    // if (this.timeSelector) {
+    //   this.calculateFee()
+    // }
   }
 
   subtract() {
     this.cash = this.cash - this.cashNumber
-    if (this.timeSelector) {
-      this.calculateFee()
-    }
+    // if (this.timeSelector) {
+    //   this.calculateFee()
+    // }
   }
 
-  calculateFee() {
-    let year = this.timeSelector / 12
-    this.interest = this.cash * this.tcea * year
-    this.totalToPay = this.cash + this.interest
-    this.fee = this.totalToPay / this.timeSelector
-  }
+  // calculateFee() {
+  //   let year = this.timeSelector / 12
+  //   this.interest = this.cash * this.tcea * year
+  //   this.totalToPay = this.cash + this.interest
+  //   this.fee = this.totalToPay / this.timeSelector
+  // }
+
   emmitSecondStep() {
     this.activeSecondStep.emit({
       item: 'stepTwo',
@@ -61,6 +60,4 @@ export class CalculateLoanComponent implements OnInit {
       cash: this.cash
     });
   }
-
-
 }

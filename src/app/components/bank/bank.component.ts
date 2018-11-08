@@ -5,32 +5,30 @@ import { Component, OnInit, Input, Output } from '@angular/core';
   templateUrl: './bank.component.html',
   styleUrls: ['./bank.component.scss']
 })
+
 export class BankComponent implements OnInit {
-@Input() element: any;
-@Input() time: any;
-@Input() cant: any;
-private intereses: any;
-private total: any;
-private mensual: any;
-private
-  constructor() {
-    // this.calculate()
-   }
+  @Input() element: any;
+  @Input() time: any;
+  @Input() cant: any;
+  private monthlyFee: number;
+  private interest: number;
+  private totalToPay: number;
+  
+  constructor() { }
 
   ngOnInit() {
     this.calculate()
   }
 
   calculate() {
-    console.log(this.time, this.cant, this.element.tcea)
-    // let year = this.timeSelector/12
-    // this.interest = this.cash * this.tcea * year
-    // this.totalToPay = this.cash + this.interest
-    // this.fee = this.totalToPay/this.timeSelector
-    let year = this.time/12;
-    this.intereses = (this.cant * (this.element.tcea * year)) / 100;
-    this.total = this.cant + this.intereses;
-    this.mensual = (this.total/this.time).toFixed(2);
-    console.log(this.intereses, this.total, this.mensual)
+    console.log(this.element)
+    console.log(this.cant)
+    this.monthlyFee = this.cant
+
+    // Interés: 10,000 * 12% (TCEA) = 1,200 
+    // Monto Total a pagar : 10,000 + 1,200 = 11,200
+    // Cuota: 11,200/ 36(tiempo a pagar) = 933.33 
+
+
   }
 }
