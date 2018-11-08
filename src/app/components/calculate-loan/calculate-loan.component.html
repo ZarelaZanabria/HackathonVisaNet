@@ -6,7 +6,8 @@
       <div class="container">
         <div class="row justify-content-between">
           <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
-          <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
+          <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/
+            {{cash}}</div>
           <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
         </div>
       </div>
@@ -15,9 +16,9 @@
       <p>¿Cuánto tiempo?</p>
       <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
         <option *ngFor="let item of time" [value]="item">{{item}} meses</option>
-      </select> 
+      </select>
     </div>
-    <div class="col-md-2">
+    <!-- <div class="col-md-2">
       <p>Debo pagar</p>
       <p class="font-size-pay font-weight-bold">S/ {{fee.toFixed(2)}}</p>
       <p>Mensuales</p>
@@ -50,25 +51,18 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <!-- 
-  interes = cash * tcea * (timeSelector/12)
-  total a pagar= cash + (this.cash * tcea * (timeSelector/12))
-  mensual = cash + (this.cash * tcea * (timeSelector/12))/timeSelector -->
-
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-9">
       <p>Préstamo basado en TCEA 12%</p>
     </div>
     <div class="col-md-3">
-      <p class="font-weight-bold">Ver cronograma</p>
+      <p class="font-weight-bold text-end">Ver cronograma</p>
       <button type="button" (click)="emmitSecondStep()" class="btn btn-my-primary btn-apply-for">SOLICITAR</button>
     </div>
-  </div>
+  </div> -->
 </div>
 <div class="container">
-    
-        <app-bank *ngFor="let bank of arrayBanks; let i = index" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3" ></app-bank>
-      
-    </div>
+  <app-bank *ngFor="let bank of arrayBanks; let i = index" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3"></app-bank>
+</div>

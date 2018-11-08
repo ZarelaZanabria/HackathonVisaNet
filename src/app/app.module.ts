@@ -15,8 +15,7 @@ import { RegistrationUserComponent } from './components/registration-user/regist
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { BankComponent } from './components/bank/bank/bank.component';
-
+import { BankComponent } from './components/bank/bank.component';
 
 
 @NgModule({
@@ -31,8 +30,6 @@ import { BankComponent } from './components/bank/bank/bank.component';
         LoanReceiverBankComponent,
         RegistrationUserComponent,
         BankComponent,
-
-
     ],
     imports: [
         BrowserModule,
