@@ -10,29 +10,38 @@ import { AppRoutingModule } from './/app-routing.module';
 import { StepsComponent } from './components/loan/steps/steps.component';
 import { LoanComponent } from './components/loan/loan.component';
 import { ContainerSectionsComponent } from './components/container-sections/container-sections.component';
-import { LoanReceiverBankComponent} from './components/loan-receiver-bank/loan-receiver-bank.component';
+import { LoanReceiverBankComponent } from './components/loan-receiver-bank/loan-receiver-bank.component';
 import { CompareLoanComponent } from './components/compare-loan/compare-loan.component';
+import { RegistrationUserComponent } from './components/registration-user/registration-user.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CalculateLoanComponent,
-    MyNavComponent,
-    HomeComponent,
-    StepsComponent,
-    LoanComponent,
-    ContainerSectionsComponent,
-    LoanReceiverBankComponent,
-    CompareLoanComponent
+    declarations: [
+        AppComponent,
+        CalculateLoanComponent,
+        MyNavComponent,
+        HomeComponent,
+        StepsComponent,
+        LoanComponent,
+        ContainerSectionsComponent,
+        LoanReceiverBankComponent,
+        CompareLoanComponent,
+        RegistrationUserComponent,
 
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
