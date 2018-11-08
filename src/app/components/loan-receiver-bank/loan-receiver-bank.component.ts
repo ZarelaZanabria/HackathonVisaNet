@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoanReceiverBankComponent implements OnInit {
 
-  public banks: any[]
+  private banks: any[]
   public validateNumbers : boolean = false;
   public bankSelect : string;
   public numberAccount: string;
