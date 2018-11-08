@@ -9,9 +9,6 @@ export class RegistroUsuarioService {
  // Any tipo de dato que trae desde Firebase
  usuarioList: AngularFireList<any>;
 
- /* // Creamos un Tarea en donde no vamos a seleecionar nada
- selectedUsuario: Usuario = new Usuario(); */
- // Permite Registrar en la base de datos
  constructor(private firebase: AngularFireDatabase) {}
  // Metodos para obtener los datos de la base de datos de Firebase
  getUsuario() {

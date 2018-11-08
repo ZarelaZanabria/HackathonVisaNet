@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/hackathon-visa-net",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

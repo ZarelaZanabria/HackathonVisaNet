@@ -9,7 +9,7 @@ import { RegistroUsuarioService } from 'src/app/services/registro-usuario.servic
 export class RegistrationUserComponent implements OnInit {
 
   //Paso 4
-  private banks: any[]
+  public banks: any[]
   public validateNumbers: boolean = false;
   public bankSelect: string;
   public numberAccount: string;
@@ -23,7 +23,7 @@ export class RegistrationUserComponent implements OnInit {
   //Paso 2
   model: any = {};
   @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
-  private clientVn: boolean = false;
+  public clientVn: boolean = false;
 
   constructor(private _userService: RegistroUsuarioService) {
 

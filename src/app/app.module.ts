@@ -19,6 +19,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { BankComponent } from './components/bank/bank.component';
 import { InfoComponent } from './components/info/info.component';
+import { PrestamosComponent } from './components/prestamos/prestamos.component';
 
 
 
@@ -36,6 +37,7 @@ import { InfoComponent } from './components/info/info.component';
         BankComponent,
         ContactsComponent,
         InfoComponent,
+        PrestamosComponent,
 
 
     ],

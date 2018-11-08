@@ -9,15 +9,15 @@ import { FormGroup } from '@angular/forms';
 
 export class CalculateLoanComponent implements OnInit {
   countryForm: FormGroup;
-  private time = [12, 24, 36, 48, 60]
+  public time = [12, 24, 36, 48, 60]
   @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
-  private timeSelector: any;
-  private cash: number = 10000;
-  private cashNumber: number = 1000;
-  private tcea: number = 0.12;
-  private fee: number = 0;
-  private interest: number = 0;
-  private totalToPay: number;
+  public timeSelector: any;
+  public cash: number = 10000;
+  public cashNumber: number = 1000;
+  public tcea: number = 0.12;
+  public fee: number = 0;
+  public interest: number = 0;
+  public totalToPay: number;
   public arrayBanks: any = [
     { name: 'PRESTAMYPE', img: '', tcea: 12 },
     { name: 'BCP', img: '', tcea: 20 },
