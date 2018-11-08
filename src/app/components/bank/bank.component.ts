@@ -12,24 +12,31 @@ export class BankComponent implements OnInit {
   @Input() cant: any;
 
   private intereses: any;
-  private total: any;
+  public total: any;
   private mensual: any;
-  private
+
   constructor() {
     // this.calculate()
   }
 
   ngOnInit() {
-    this.calculate()
+    
   }
 
-  calculate() {
-    console.log(this.time, this.cant, this.element.tcea)
+  calculate(element) {
+    console.log(this.time, this.cant, element.tcea);
+
     let year = this.time / 12;
-    this.intereses = (this.cant * (this.element.tcea * year)) / 100;
+    this.intereses = (this.cant * (element.tcea * year)) / 100;
     this.total = this.cant + this.intereses;
     this.mensual = (this.total / this.time).toFixed(2);
     console.log(this.intereses, this.total, this.mensual)
+
+    return {
+      intereses: this.intereses,
+      total: this.total,
+      mensual: this.mensual,
+    }
   }
 
   emmitSecondStep() {
@@ -37,7 +44,7 @@ export class BankComponent implements OnInit {
       item: 'stepTwo',
     });
   }
-  
-  
+
+
 
 }
