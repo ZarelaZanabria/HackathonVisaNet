@@ -25,7 +25,7 @@ export class CalculateLoanComponent implements OnInit {
     { name: 'CAJA HUANCAYO', img: '', tcea: 20 },
   ]
 
-  constructor() {  }
+  constructor() { }
 
   ngOnInit() {
     this.timeSelector = 12;
@@ -39,12 +39,12 @@ export class CalculateLoanComponent implements OnInit {
 
   subtract() {
     this.cash = this.cash - this.cashNumber
- 
+
   }
-   sort(){
-    this.arrayBanks = this.arrayBanks.sort((a, b) => a.tcea - b.tcea );
+  sort() {
+    this.arrayBanks = this.arrayBanks.sort((a, b) => a.tcea - b.tcea);
     console.log(this.arrayBanks);
-   }
+  }
 
   emmitSecondStep() {
     this.activeSecondStep.emit({
