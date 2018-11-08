@@ -49,7 +49,7 @@ export class LoanReceiverBankComponent implements OnInit {
   if(!value1.checked || !value2.checked) this.noneConditions = true;
   if(!this.bankSelect) this.noneBank = true;
   if(/^([0-9])+$/g.test(this.numberAccount) && this.numberAccount.length === this.cant[0]['numbers'] && value1.value && value2 ){
-  alert('feliz')
+  alert('feliz') 
   } else {
     this.validAccount = false;
   }
