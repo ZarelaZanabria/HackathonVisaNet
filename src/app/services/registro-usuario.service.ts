@@ -31,7 +31,10 @@ export class RegistroUsuarioService {
        ruc : usuario.ruc,
        codigo: usuario.codClient ||  null,
        rubroNegocio: usuario.rubroNegocio,
-       password : usuario.password
+       password : usuario.password,
+       cuenta : usuario.cuenta,
+       banco : usuario.banco,
+
 
       /*  ,
        
