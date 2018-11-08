@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-calculate-loan',
@@ -8,8 +7,6 @@ import { FormGroup } from '@angular/forms';
 })
 
 export class CalculateLoanComponent implements OnInit {
-  countryForm: FormGroup;
-  // tslint:disable-next-line:max-line-length
   private time = [12, 24, 36, 48, 60]
   @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
   private timeSelector: number;
@@ -49,7 +46,6 @@ export class CalculateLoanComponent implements OnInit {
   }
 
   emmitSecondStep() {
-    console.log(this.timeSelector, this.cash);
     this.activeSecondStep.emit({
       item: 'stepTwo',
       time: this.timeSelector,

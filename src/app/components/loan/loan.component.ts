@@ -11,7 +11,7 @@ export class LoanComponent implements OnInit {
   public stepThree = false;
   public stepFour = false;
   public stepFive = false;
-  private timeSelector: number;
+  private timeSelect: number;
   private cantLoan: number;
 
   constructor() { }
@@ -19,9 +19,8 @@ export class LoanComponent implements OnInit {
 
   activeStep(step) {
     this[step.item] = true;
-    this.timeSelector = step.time || this.timeSelector;
+    this.timeSelect = step.time || this.timeSelect;
     this.cantLoan = step.cash || this.cantLoan;
-    // console.log(this.timeSelect, this.cantLoan)
   }
 
 }

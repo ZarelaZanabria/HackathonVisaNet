@@ -7,25 +7,30 @@
     </div>
     <div class="container mb-4">
       <div class="row justify-content-around border-grey py-3">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <p>BUSQUEDA</p>
           <div class="border-yellow">
             <p class="ml-4 mt-3"><i class="fas fa-search mr-1"></i>ENTIDAD</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <p>MONTO</p>
           <div class="row justify-content-between">
-            <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
+            <div (click)="subtractCash()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
             <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
-            <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+            <div (click)="addCash()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
           </div>
         </div>
-        <div class="col-md-2">
-          <p>TIEMPO{{timeSelector}}</p>
-          <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
+        <div class="col-md-3">
+          <p>TIEMPO</p>
+          <!-- <select [(ngModel)]="timeSelector" class="form-control" (change)="calculateFee()">
             <option *ngFor="let item of time" [value]="value">{{item}} meses</option>
-          </select>
+          </select> -->
+          <div class="row justify-content-between">
+            <div (click)="subtractTime()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
+            <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">{{timeSelector}} meses</div>
+            <div (click)="addTime()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
+            </div>
         </div>
       </div>
     </div>
@@ -49,7 +54,7 @@
         <div class="col-md-2">
           <p class="font-size-midi">INTERESES</p>
           <p class="font-weight-bold">S/ 3600</p>
-          <p class="font-size-mini">a 36 meses</p>
+          <p class="font-size-mini">a {{timeSelector}} meses</p>
         </div>
         <div class="col-md-2">
           <p class="font-size-midi">MONTO TOTAL</p>
