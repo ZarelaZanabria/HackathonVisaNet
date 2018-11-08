@@ -19,8 +19,8 @@ export class LoanComponent implements OnInit {
   }
   activeStep(step) {
     this[step.item] = true;
-    this.timeSelect = step.time;
-    this.cantLoan = step.cash;
+    this.timeSelect = step.time || this.timeSelect;
+    this.cantLoan = step.cash || this.timeSelect;
     // console.log(this.timeSelect, this.cantLoan)
   }
 

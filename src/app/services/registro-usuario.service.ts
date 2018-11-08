@@ -29,7 +29,7 @@ export class RegistroUsuarioService {
        dni: usuario.dni,
        phone: usuario.phone,
        ruc : usuario.ruc,
-       codigo: usuario.codClient,
+       codigo: usuario.codClient ||  null,
        rubroNegocio: usuario.rubroNegocio,
        password : usuario.password
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { RegistroUsuarioService } from 'src/app/services/registro-usuario.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { RegistroUsuarioService } from 'src/app/services/registro-usuario.servic
 })
 export class RegistrationUserComponent implements OnInit {
   model: any = {};
+  @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();
   private clientVn : boolean = false;
 
   constructor(private _userService: RegistroUsuarioService) {
@@ -24,8 +25,15 @@ export class RegistrationUserComponent implements OnInit {
   onSubmit() {  
     console.log(this.model);
     this._userService.insertUsuario(this.model);
+    this.emmitThreeStep();
   }
   notClient() {
     this.clientVn = true;
+  }
+  
+  emmitThreeStep() {
+    this.activeSecondStep.emit({
+      item: 'stepThree',
+    });
   }
 }

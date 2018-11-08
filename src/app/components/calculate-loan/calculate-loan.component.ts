@@ -12,7 +12,7 @@ export class CalculateLoanComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   private time = [12 ,  24,  36 , 48,60]
 //  private time = [12, 13]
-  @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();;
+  @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();
   private timeSelector: any;
   private cash: number = 10000;
   private cashNumber: number = 1000;
