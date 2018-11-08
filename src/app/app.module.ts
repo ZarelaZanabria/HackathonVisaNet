@@ -16,7 +16,6 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 // import { BankComponent } from './components/bank/bank.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
 import { BankComponent } from './components/bank/bank.component';
 import { InfoComponent } from './components/info/info.component';
 import { PrestamosComponent } from './components/prestamos/prestamos.component';
@@ -35,7 +34,6 @@ import { PrestamosComponent } from './components/prestamos/prestamos.component';
         LoanReceiverBankComponent,
         RegistrationUserComponent,
         BankComponent,
-        ContactsComponent,
         InfoComponent,
         PrestamosComponent,
 
