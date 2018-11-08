@@ -11,9 +11,17 @@ export class LoanComponent implements OnInit {
   public stepThree = false;
   public stepFour = false;
   public stepFive = false;
+  private timeSelect : number;
+  private cantLoan: number;
   constructor() { }
 
   ngOnInit() {
+  }
+  activeStep(step) {
+    this[step.item] = true;
+    this.timeSelect = step.time;
+    this.cantLoan = step.cash;
+    // console.log(this.timeSelect, this.cantLoan)
   }
 
 }

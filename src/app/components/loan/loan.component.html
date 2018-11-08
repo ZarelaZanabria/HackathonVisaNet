@@ -1,7 +1,7 @@
 <app-steps [s1]="stepOne" [s2]="stepTwo" [s3]="stepThree" [s4]="stepFour" [s5]="stepFive">
 </app-steps>
-<ng-container *ngIf="stepOne">
-  <app-calculate-loan></app-calculate-loan>
+<ng-container *ngIf="stepOne && !stepTwo">
+  <app-calculate-loan (activeSecondStep)="activeStep($event)"></app-calculate-loan>
 </ng-container>
 <ng-container *ngIf="stepTwo">
   <app-registration-user></app-registration-user>

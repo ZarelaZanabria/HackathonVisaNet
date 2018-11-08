@@ -8,6 +8,7 @@ import { RegistroUsuarioService } from 'src/app/services/registro-usuario.servic
 })
 export class RegistrationUserComponent implements OnInit {
   model: any = {};
+  private clientVn : boolean = false;
 
   constructor(private _userService: RegistroUsuarioService) {
     this.model.gender = '0';
@@ -20,10 +21,11 @@ export class RegistrationUserComponent implements OnInit {
        
   }
 
-  onSubmit() {
-    
+  onSubmit() {  
     console.log(this.model);
     this._userService.insertUsuario(this.model);
-
+  }
+  notClient() {
+    this.clientVn = true;
   }
 }
