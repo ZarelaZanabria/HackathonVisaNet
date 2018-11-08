@@ -2,8 +2,35 @@ $primary-color: #C50A5B;
 $secondary-color: #f9cd09;
 $color-grey: #F1F2F4;
 
+.background-image {
+  background-image: url(../../../assets/img/principal.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;  
+  height: 550px;
+  width: 100%;
+}
+
 .bg-fucsia {
   background: $primary-color;
+}
+
+.bg-yellow {
+  background: $secondary-color;
+}
+
+.btn-yellow {
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+}
+
+.btn-fucsia {
+  border: 2px solid $primary-color;
+  color: $primary-color;
+}
+
+.color-fucsia {
+  color: $primary-color;
 }
 
 .sub-title {
@@ -14,23 +41,3 @@ $color-grey: #F1F2F4;
   color: #ffffff;
 }
 
-.btn-yellow {
-  border: 2px solid $secondary-color;
-  color: $secondary-color;
-}
-
-.parent {
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
-  transform: skewY(-5deg);
-}
-
-.parent > .child {
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
-  transform: skewY(5deg);
-}
