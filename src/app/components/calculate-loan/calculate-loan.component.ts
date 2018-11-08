@@ -21,7 +21,7 @@ export class CalculateLoanComponent implements OnInit {
   public arrayBanks: any = [
     { name: 'PRESTAMYPE', img: '', tcea: 12 },
     { name: 'BCP', img: '', tcea: 20 },
-    { name: 'CAJA AREQUIPA', img: '', tcea: 25 }
+    { name: 'CAJA AREQUIPA', img: '', tcea: 25 },
     { name: 'CAJA HUANCAYO', img: '', tcea: 20 },
   ]
 
@@ -34,24 +34,17 @@ export class CalculateLoanComponent implements OnInit {
 
   add() {
     this.cash = this.cash + this.cashNumber
-    // if (this.timeSelector) {
-    //   this.calculateFee()
-    // }
+
   }
 
   subtract() {
     this.cash = this.cash - this.cashNumber
-    // if (this.timeSelector) {
-    //   this.calculateFee()
-    // }
+ 
   }
-
-  // calculateFee() {
-  //   let year = this.timeSelector / 12
-  //   this.interest = this.cash * this.tcea * year
-  //   this.totalToPay = this.cash + this.interest
-  //   this.fee = this.totalToPay / this.timeSelector
-  // }
+   sort(){
+    this.arrayBanks = this.arrayBanks.sort((a, b) => a.tcea - b.tcea );
+    console.log(this.arrayBanks);
+   }
 
   emmitSecondStep() {
     this.activeSecondStep.emit({

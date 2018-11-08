@@ -14,14 +14,15 @@
         <div class="container">
           <div class="row justify-content-between">
             <div (click)="subtract()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">-</div>
-            <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/ {{cash}}</div>
+            <div class="col-7 box-grey font-size-cash font-weight-bold d-flex justify-content-center align-items-center">S/
+              {{cash}}</div>
             <div (click)="add()" class="col-2 b-plus-less font-weight-bold d-flex justify-content-center align-items-center">+</div>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <p>¿Cuánto tiempo?</p>
-        <select [(ngModel)]="timeSelector" class="form-control">
+        <select [(ngModel)]="timeSelector" class="form-control" (change)="sort()">
           <option *ngFor="let item of time" [value]="item">{{item}} meses</option>
         </select>
       </div>
@@ -29,7 +30,7 @@
   </div>
 </div>
 <div class="container">
-    
-        <app-bank *ngFor="let bank of arrayBanks; let i = index" (activeSecondStep)="emmitSecondStep()" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3" ></app-bank>
-      
-    </div>
+  <app-bank *ngFor="let bank of arrayBanks; let i = index" (activeSecondStep)="emmitSecondStep()" [element]="bank"
+  [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3"></app-bank>
+
+</div>
