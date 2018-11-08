@@ -1,27 +1,37 @@
-  <div class="col-md-2">
-    <p>{{element.name}}</p>
-    <img src={{element.img}} class="img-fluid" alt="">
+<div class="container">
+<div class="card w-100">
+  <div class="row card-body">
+    <div class="col-2">
+      <p><strong>{{element.name}}</strong></p>
+      <img src={{element.img}} class="img-fluid" alt="">
+    </div>
+    <div class="col-2">
+      <p class="font-size-midi"><strong>TIENES UN PRÉSTAMO DE:</strong></p>
+      <p class="font-weight-bold">S/ {{cant}}</p>
+      <p class="font-size-midi">TCEA: {{element.tcea}}%</p>
+    </div>
+    <div class="col-2">
+      <p class="font-size-midi"><strong>¿CUANTO VOY A PAGAR?</strong></p>
+      <p class="font-weight-bold">S/{{this.mensual}}</p>
+      <p class="font-size-mini">Mensuales</p>
+    </div>
+    <div class="col-2">
+      <p class="font-size-midi"><strong>INTERESES</strong></p>
+      <p class="font-weight-bold">S/ {{this.intereses}}</p>
+      <p class="font-size-mini">a meses</p>
+    </div>
+    <div class="col-2">
+      <p class="font-size-midi"><strong>MONTO TOTAL</strong></p>
+      <p class="font-weight-bold">S/ {{this.total}}</p>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-secondary btn-md" (click)="emmitSecondStep()">PIDE TU <br> PRÉSTAMO</button>
+    </div>
   </div>
-  <div class="col-md-2">
-    <p class="font-size-midi">TIENES UN PRÉSTAMO DE:</p>
-    <p class="font-weight-bold">S/ {{cant}}</p>
-    <p class="font-size-midi">TCEA: {{element.tcea}}%</p>
-  </div>
-  <div class="col-md-2">
-    <p class="font-size-midi">¿CUANTO VOY A PAGAR?</p>
-    <p class="font-weight-bold">S/{{this.mensual}}</p>
-    <p class="font-size-mini">Mensuales</p>
-  </div>
-  <div class="col-md-2">
-    <p class="font-size-midi">INTERESES</p>
-    <p class="font-weight-bold">S/ {{this.intereses}}</p>
-    <p class="font-size-mini">a  meses</p>
-  </div>
-  <div class="col-md-2">
-    <p class="font-size-midi">MONTO TOTAL</p>
-    <p class="font-weight-bold">S/ {{this.total}}</p>
-  </div>
-  <div class="col-md-2">
-    <button type="button" class="btn btn-secondary btn-sm">PIDE TU <br> PRÉSTAMO</button>
-  </div>
+</div>
+</div>
+
+
+
+
 <!-- </div> -->

@@ -69,6 +69,6 @@
 </div>
 <div class="container">
     
-        <app-bank *ngFor="let bank of arrayBanks; let i = index" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3" ></app-bank>
+        <app-bank *ngFor="let bank of arrayBanks; let i = index" (activeSecondStep)="emmitSecondStep()" [element]="bank" [cant]="cash" [time]="timeSelector" class="row justify-content-around border-bank pt-4 pl-4 mb-3" ></app-bank>
       
     </div>

@@ -57,8 +57,6 @@ export class CalculateLoanComponent implements OnInit {
   emmitSecondStep() {
     this.activeSecondStep.emit({
       item: 'stepTwo',
-      time: this.timeSelector,
-      cash: this.cash
     });
   }
 
