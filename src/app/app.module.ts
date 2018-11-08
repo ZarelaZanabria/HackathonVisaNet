@@ -11,6 +11,7 @@ import { StepsComponent } from './components/loan/steps/steps.component';
 import { LoanComponent } from './components/loan/loan.component';
 import { ContainerSectionsComponent } from './components/container-sections/container-sections.component';
 import { LoanReceiverBankComponent} from './components/loan-receiver-bank/loan-receiver-bank.component';
+import { CompareLoanComponent } from './components/compare-loan/compare-loan.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoanReceiverBankComponent} from './components/loan-receiver-bank/loan-r
     StepsComponent,
     LoanComponent,
     ContainerSectionsComponent,
-    LoanReceiverBankComponent
+    LoanReceiverBankComponent,
+    CompareLoanComponent
 
   ],
   imports: [
