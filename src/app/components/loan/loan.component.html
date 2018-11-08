@@ -3,6 +3,6 @@
 <ng-container *ngIf="stepOne && !stepTwo">
   <app-calculate-loan (activeSecondStep)="activeStep($event)"></app-calculate-loan>
 </ng-container>
-<ng-container *ngIf="stepTwo">
-  <app-registration-user></app-registration-user>
+<ng-container *ngIf="stepTwo && !stepThree">
+  <app-registration-user (activeSecondStep)="activeStep($event)"></app-registration-user>
 </ng-container>
