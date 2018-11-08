@@ -13,7 +13,7 @@
   <p class="font-size-midi">¿CUANTO VOY A PAGAR?</p>
   <!-- Cuota: 11,200/ 36(tiempo a pagar) = 933.33 -->
   <p class="font-weight-bold">S/ {{calculate(element)['mensual']}}</p>
-  <p class="font-size-mini">Mensuales</p> time: {{time}}
+  <p class="font-size-mini">Mensuales</p>
 </div>
 <div class="col-md-2">
   <p class="font-size-midi">INTERESES</p>
@@ -23,9 +23,8 @@
 </div>
 <div class="col-md-2">
   <p class="font-size-midi">MONTO TOTAL</p>
-  <p class="font-weight-bold">{{calculate(element)['total']}} A PAGAR</p>
   <!-- Monto Total a pagar : 10,000 + 1,200 = 11,200 -->
-  <!-- <p class="font-weight-bold">S/ {{totalToPay}}</p> -->
+  <p class="font-weight-bold">S/ {{calculate(element)['total']}}</p>
 </div>
 <div class="col-md-2">
   <button type="button" (click)="emmitSecondStep()" class="btn btn-sm btn-my-primary btn-apply-for">PIDE TU <br>
