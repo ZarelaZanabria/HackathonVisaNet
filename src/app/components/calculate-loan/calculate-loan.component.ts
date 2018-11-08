@@ -46,13 +46,6 @@ export class CalculateLoanComponent implements OnInit {
     console.log(this.arrayBanks);
    }
 
-  // calculateFee() {
-  //   let year = this.timeSelector / 12
-  //   this.interest = this.cash * this.tcea * year
-  //   this.totalToPay = this.cash + this.interest
-  //   this.fee = this.totalToPay / this.timeSelector
-  // }
-
   emmitSecondStep() {
     this.activeSecondStep.emit({
       item: 'stepTwo',
