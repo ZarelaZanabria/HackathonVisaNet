@@ -1,6 +1,6 @@
 <div class="card mt-5">
-  <div class="card-body">
-    <h3>Ingresa tus datos</h3>
+  <div class="container">
+    <h3>INGRESA TUS DATOS</h3>
     <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
       <div class="form-group">
         <label for="nameClient">NOMBRE:</label>
@@ -62,14 +62,14 @@
         <input type="number" class="form-control" name="codClient" #codClient="ngModel" minlength="9" maxlength="9"
           [(ngModel)]="model.codClient" [ngClass]="{'is-invalid': f.submitted && ruc.invalid }"  pattern="[0-9]{9,9}" required>
         <div *ngIf="f.submitted && codClient.invalid" class="invalid-feedback">
-          <div *ngIf="codClient?.errors.required">Se requiere el código del cliente</div>
-          <div *ngIf="codClient?.errors.pattern">El máximo es 9 caracteres</div>
+          <div *ngIf="codClient.errors.required">Se requiere el código del cliente</div>
+          <div *ngIf="codClient.errors.pattern">El máximo es 9 caracteres</div>
         </div>
       </div>
       <div class="form-group">
         <label for="rubroNegocio">RUBRO DE NEGOCIO:</label>
         <input type="text" class="form-control" name="rubroNegocio" #rubroNegocio="ngModel" [(ngModel)]="model.rubroNegocio"
-          [ngClass]="{ 'is-invalid': f.submitted && rubroNegocio.invalid }" required>
+          [ngClass]="{ 'is-invalid': f.submitted && rubroNegocio.invalid }" pattern="[A-Za-z]+" required>
         <div *ngIf="f.submitted && rubroNegocio.invalid" class="invalid-feedback">
           <div *ngIf="rubroNegocio?.errors.required">El rubro del negocio es obligatorio</div>
         </div>
