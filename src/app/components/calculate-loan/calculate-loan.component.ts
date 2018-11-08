@@ -8,6 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 
 export class CalculateLoanComponent implements OnInit {
+  showBanks: boolean= false;
   countryForm: FormGroup;
   private time = [12, 24, 36, 48, 60]
   @Output() activeSecondStep: EventEmitter<any> = new EventEmitter<void>();
@@ -50,5 +51,8 @@ export class CalculateLoanComponent implements OnInit {
     this.activeSecondStep.emit({
       item: 'stepTwo',
     });
+  }
+  showBank() {
+    this.showBanks = true;
   }
 }
