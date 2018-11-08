@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyB7cMCUllaMk6RRKMlEwdSnm_uPVcY2CNo",
+    authDomain: "visanet-b0e7d.firebaseapp.com",
+    databaseURL: "https://visanet-b0e7d.firebaseio.com",
+    projectId: "visanet-b0e7d",
+    storageBucket: "visanet-b0e7d.appspot.com",
+    messagingSenderId: "875881449507"
+  }
+
 };
 
 /*
