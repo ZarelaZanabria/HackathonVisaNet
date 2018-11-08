@@ -1,99 +1,140 @@
 <div class="card mt-5">
   <div class="container">
-    <h3>INGRESA TUS DATOS</h3>
-    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-      <div class="form-group">
-        <label for="nameClient">NOMBRE:</label>
-        <input type="text" class="form-control" name="nameClient" #nameClient="ngModel" [(ngModel)]="model.nameClient"
-          [ngClass]="{ 'is-invalid': f.submitted && nameClient.invalid }"  pattern="[A-Za-z]+" required>
-        <div *ngIf="f.submitted && nameClient.invalid" class="invalid-feedback">
-          <div *ngIf="nameClient.errors.required">El nombre es requerido</div>
-          <div *ngIf="nameClient.errors.pattern">Solo se debe ingresar letras</div>
+    <div class="row ">
+      <h3 class="col-12 text-center">INGRESA TUS DATOS</h3>
+      <form class="col-12" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="row justify-content-lg-center justify-content-lg-center">
+          <div class="form-group col-3">
+            <label for="nameClient">NOMBRE:</label>
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="nameClient"
+              #nameClient="ngModel" [(ngModel)]="model.nameClient" [ngClass]="{ 'is-invalid': f.submitted && nameClient.invalid }"
+              pattern="[A-Za-z]+" required>
+            <div *ngIf="f.submitted && nameClient.invalid" class="invalid-feedback">
+              <div *ngIf="nameClient.errors.required">El nombre es requerido</div>
+              <div *ngIf="nameClient.errors.pattern">Solo se debe ingresar letras</div>
+            </div>
+          </div>
+          <div class="form-group col-3">
+            <label for="apellClient">APELLIDO:</label>
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="apellClient"
+              #apellClient="ngModel" [(ngModel)]="model.apellClient" [ngClass]="{ 'is-invalid': f.submitted && apellClient.invalid }"
+              pattern="[A-Za-z]+" required>
+            <div *ngIf="f.submitted && apellClient.invalid" class="invalid-feedback">
+              <div *ngIf="apellClient.errors.required">El apellido es requerido</div>
+              <div *ngIf="apellClient.errors.pattern">Solo se debe ingresar letras</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="apellClient">APELLIDO:</label>
-        <input type="text" class="form-control" name="apellClient" #apellClient="ngModel" [(ngModel)]="model.apellClient"
-          [ngClass]="{ 'is-invalid': f.submitted && apellClient.invalid }" pattern="[A-Za-z]+" required>
-        <div *ngIf="f.submitted && apellClient.invalid" class="invalid-feedback">
-          <div *ngIf="apellClient.errors.required">El apellido es requerido</div>
-          <div *ngIf="apellClient.errors.pattern">Solo se debe ingresar letras</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">EMAIL : </label>
-        <input type="email" class="form-control" name="email" email #email="ngModel" [(ngModel)]="model.email"
-          [ngClass]="{'is-invalid': f.submitted && email.invalid }"  required>
-        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-          <div *ngIf="email.errors.required">Su email es requerido</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="dni" for="exampleCheck1">DNI : </label>
-        <input type="number" class="form-control" name="dni" #dni="ngModel" minlength="8" maxlength="8" [(ngModel)]="model.dni"
-          [ngClass]="{'is-invalid': f.submitted && dni.invalid}" pattern="[0-9]{8,8}" required>
-        <div *ngIf="f.submitted && dni.invalid" class="invalid-feedback">
-          <div *ngIf="dni.errors.required">El DNI es requerido</div>
-          <div *ngIf="dni.errors.pattern">Solo debes ingresar 8 números </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="phone" for="exampleCheck1">CELULAR: </label>
-        <input type="number" class="form-control" name="phone" #phone="ngModel" minlength="9" maxlength="9" [(ngModel)]="model.phone"
-          [ngClass]="{'is-invalid': f.submitted && phone.invalid }" pattern="[0-9]{9,9}" required>
-        <div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
-          <div *ngIf="phone.errors.required">El celular es requerido</div>
-          <div *ngIf="phone.errors.pattern">El máximo es 9 caracteres</div>
-          
+        <div class="row justify-content-lg-center">
+          <div class="form-group col-3">
+            <div class="form-group">
+              <label for="email">EMAIL : </label>
+              <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" email
+                #email="ngModel" [(ngModel)]="model.email" [ngClass]="{'is-invalid': f.submitted && email.invalid }"
+                required>
+              <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Su email es requerido</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-3">
+            <div class="form-group">
+              <label class="dni" for="exampleCheck1">DNI : </label>
+              <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="dni" #dni="ngModel"
+                minlength="8" maxlength="8" [(ngModel)]="model.dni" [ngClass]="{'is-invalid': f.submitted && dni.invalid}"
+                pattern="[0-9]{8,8}" required>
+              <div *ngIf="f.submitted && dni.invalid" class="invalid-feedback">
+                <div *ngIf="dni.errors.required">El DNI es requerido</div>
+                <div *ngIf="dni.errors.pattern">Solo debes ingresar 8 números </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="ruc" for="exampleCheck1">RUC: </label>
-        <input type="number" class="form-control" name="ruc" #ruc="ngModel" minlength="10" maxlength="11" [(ngModel)]="model.ruc"
-          [ngClass]="{'is-invalid': f.submitted && ruc.invalid }" pattern="[0-9]{10,10}" required>
-        <div *ngIf="f.submitted && ruc.invalid" class="invalid-feedback">
-          <div *ngIf="ruc.errors.required">El ruc es requerido</div>
-          <div *ngIf="ruc.errors.pattern">El nínimo es 10 caracteres</div>
-        </div>
-      </div>
-      <div class="form-group" *ngIf="!clientVn">
-        <label class="codClient" for="exampleCheck1">CÓDIGO DE CLIENTE VISANET: </label>
-        <input type="number" class="form-control" name="codClient" #codClient="ngModel" minlength="9" maxlength="9"
-          [(ngModel)]="model.codClient" [ngClass]="{'is-invalid': f.submitted && ruc.invalid }"  pattern="[0-9]{9,9}" required>
-        <div *ngIf="f.submitted && codClient.invalid" class="invalid-feedback">
-          <div *ngIf="codClient.errors.required">Se requiere el código del cliente</div>
-          <div *ngIf="codClient.errors.pattern">El máximo es 9 caracteres</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="rubroNegocio">RUBRO DE NEGOCIO:</label>
-        <input type="text" class="form-control" name="rubroNegocio" #rubroNegocio="ngModel" [(ngModel)]="model.rubroNegocio"
-          [ngClass]="{ 'is-invalid': f.submitted && rubroNegocio.invalid }" pattern="[A-Za-z]+" required>
-        <div *ngIf="f.submitted && rubroNegocio.invalid" class="invalid-feedback">
-          <div *ngIf="rubroNegocio?.errors.required">El rubro del negocio es obligatorio</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password">PASSWORD:</label>
-        <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="model.password"
-          maxlength="15" minlength="6" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"  pattern="[0-9a-zA-z]{6,6}" required>
-        <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-            <div *ngIf="password.errors.required">La contraseña es obligatorio</div>
-          <div *ngIf="password.errors.pattern">La contraseña requiere 6 caracteres</div>
-        </div>
-      </div>
-      <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" (change)="notClient()" >
-          <label class="form-check-label" for="exampleCheck1">NO SOY CLIENTE VISANET</label>
-      </div>
-      <div class="form-group text-center pt-3">
-        <div class="form-group">
-          <button class="btn btn-primary" >SOLICITAR</button>
-        </div>
-      </div>
-      
 
-    </form>
+        <div class="row justify-content-lg-center">
+          <div class="form-group col-3">
+            <div class="form-group">
+              <label class="phone" for="exampleCheck1">CELULAR: </label>
+              <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="phone" #phone="ngModel"
+                minlength="9" maxlength="9" [(ngModel)]="model.phone" [ngClass]="{'is-invalid': f.submitted && phone.invalid }"
+                pattern="[0-9]{9,9}" required>
+              <div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+                <div *ngIf="phone.errors.required">El celular es requerido</div>
+                <div *ngIf="phone.errors.pattern">El máximo es 9 caracteres</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-3">
+            <div class="form-group">
+              <label class="ruc" for="exampleCheck1">RUC: </label>
+              <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="ruc" #ruc="ngModel"
+                minlength="10" maxlength="11" [(ngModel)]="model.ruc" [ngClass]="{'is-invalid': f.submitted && ruc.invalid }"
+                pattern="[0-9]{10,10}" required>
+              <div *ngIf="f.submitted && ruc.invalid" class="invalid-feedback">
+                <div *ngIf="ruc.errors.required">El ruc es requerido</div>
+                <div *ngIf="ruc.errors.pattern">El nínimo es 10 caracteres</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-center">
+          <div class="form-group col-3">
+            <div class="form-group" *ngIf="!clientVn">
+              <label class="codClient" for="exampleCheck1">CÓDIGO DE CLIENTE VISANET: </label>
+              <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="codClient"
+                #codClient="ngModel" minlength="9" maxlength="9" [(ngModel)]="model.codClient" [ngClass]="{'is-invalid': f.submitted && ruc.invalid }"
+                pattern="[0-9]{9,9}" required>
+              <div *ngIf="f.submitted && codClient.invalid" class="invalid-feedback">
+                <div *ngIf="codClient.errors.required">Se requiere el código del cliente</div>
+                <div *ngIf="codClient.errors.pattern">El máximo es 9 caracteres</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-3">
+            <div class="form-group">
+              <label for="rubroNegocio">RUBRO DE NEGOCIO:</label>
+              <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="rubroNegocio"
+                #rubroNegocio="ngModel" [(ngModel)]="model.rubroNegocio" [ngClass]="{ 'is-invalid': f.submitted && rubroNegocio.invalid }"
+                pattern="[A-Za-z]+" required>
+              <div *ngIf="f.submitted && rubroNegocio.invalid" class="invalid-feedback">
+                <div *ngIf="rubroNegocio?.errors.required">El rubro del negocio es obligatorio</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-lg-center">
+          <div class="form-group col-3">
+            <label for="password">PASSWORD:</label>
+            <input type="password" class="form-control border-top-0 border-right-0 border-left-0" name="password"
+              #password="ngModel" [(ngModel)]="model.password" maxlength="15" minlength="6" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+              pattern="[0-9a-zA-z]{6,6}" required>
+            <div *ngIf="f.submitted && password.invalid" class="invalid-feedback col-3">
+              <div *ngIf="password.errors.required">La contraseña es obligatorio</div>
+              <div *ngIf="password.errors.pattern">La contraseña requiere 6 caracteres</div>
+            </div>
+          </div>
+
+
+          <div class="form-group form-check col-3">
+            <input type="checkbox" class="form-check-input" (change)="notClient()">
+            <label class="form-check-label" for="exampleCheck1">NO SOY CLIENTE VISANET</label>
+          </div>
+        </div>
+        <div class="form-group text-center p-3">
+          <div class="form-group">
+            <button class="btn btn-primary">SOLICITAR</button>
+          </div>
+        </div>
+
+
+      </form>
+
+
+
+    </div>
+
+
   </div>
 </div>
