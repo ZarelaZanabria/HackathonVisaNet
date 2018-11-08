@@ -7,6 +7,7 @@ import { RegistroUsuarioService } from 'src/app/services/registro-usuario.servic
   styleUrls: ['./registration-user.component.scss']
 })
 export class RegistrationUserComponent implements OnInit {
+
   //Paso 4
   private banks: any[]
   public validateNumbers: boolean = false;

@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { BankComponent } from './components/bank/bank/bank.component';
+import { InfoComponent } from './components/info/info.component';
 
 
 
@@ -31,6 +32,7 @@ import { BankComponent } from './components/bank/bank/bank.component';
         LoanReceiverBankComponent,
         RegistrationUserComponent,
         BankComponent,
+        InfoComponent,
 
 
     ],
