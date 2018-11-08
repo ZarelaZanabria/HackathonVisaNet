@@ -5,13 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './loan-receiver-bank.component.html',
   styleUrls: ['./loan-receiver-bank.component.scss']
 })
+
 export class LoanReceiverBankComponent implements OnInit {
 
   public banks: any[]
   public validateNumbers : boolean = false;
   public bankSelect : string;
-  public numberCount: string;
-  private lengthNumbersCount: number;
+  public numberAccount: string;
+  public validAccount: boolean = true;
+  public ejemAccount : string = '12345678901234567890';
+  public cant : any;
+  public cantRecomeded: string ;
+  public noneBank: boolean = false;
+  public noneAccount: boolean= false;
+  public noneConditions : boolean= false;
   constructor() { 
     this.banks = [
       {name: 'Banco de Crédito', numbers:  15},
@@ -28,11 +35,25 @@ export class LoanReceiverBankComponent implements OnInit {
   ngOnInit() {
     // this.validateForm()
   }
+  checkoutCant() {
+  this.cant = this.banks.filter(elem=>elem.name === this.bankSelect);  
+  this.cantRecomeded = this.ejemAccount.slice(0,this.cant[0]['numbers'])
+  console.log(this.cant[0]['numbers'])
+  }
 
   validateForm(value1, value2) {
-
-  if(/^([0-9])+$/g.test(this.numberCount) && this.numberCount.length === 1 && value1.value && value2 )
-   this.validateNumbers = true;
-  //  console.log(this.validateNumbers)
+  // this.cant = this.banks.filter(elem=>elem.name === this.bankSelect);
+  // console.log();
+  
+  if(!this.numberAccount) this.noneAccount = true; 
+  if(!value1.checked || !value2.checked) this.noneConditions = true;
+  if(!this.bankSelect) this.noneBank = true;
+  if(/^([0-9])+$/g.test(this.numberAccount) && this.numberAccount.length === this.cant[0]['numbers'] && value1.value && value2 ){
+  alert('feliz')
+  } else {
+    this.validAccount = false;
   }
+ 
+  }
+ 
 }
