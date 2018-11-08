@@ -1,21 +1,27 @@
 <div class="container">
-
- 
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="search" (change)="filtroRubro()">
+      <option value="Textil">Textil</option>
+      <option value="Peluquería">Peluquería</option>
+      <option value="Tecnología">Tecnología</option>
+      <option value="Restaurant">Restaurant</option>
+    </select>
+  </div>
   <div class="row">
     <div class="col-sm-7" *ngFor="let colaborator of colaborators" class="bg-secondary">
       <div class="row">
         <div class="col-sm-6" height="50px">
-        <img src="{{colaborator.img}}" class="img-fluid"  alt="" srcset="">  
+          <img src="{{colaborator.img}}" class="img-fluid" alt="foto" srcset="">
         </div>
         <div class="col-sm-6">
-           
-          <div class="row">{{colaborator.name}}{{colaborator.lastname}}</div>
-          <div class="row">{{colaborator.profession}}</div>
-          <div class="row">{{colaborator.experience}}</div>
+
+          <div class="row">{{calobarator.name}}{{calobarator.lastname}}</div>
+          <div class="row">{{calobarator.profession}}</div>
+          <div class="row">{{calobarator.experience}}</div>
           <div class="row">{{colaborator.nearness}}</div>
         </div>
       </div>
     </div>
-
-</div>
+  </div>
 </div>
