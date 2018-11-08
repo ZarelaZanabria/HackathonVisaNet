@@ -11,7 +11,6 @@ import { StepsComponent } from './components/loan/steps/steps.component';
 import { LoanComponent } from './components/loan/loan.component';
 import { ContainerSectionsComponent } from './components/container-sections/container-sections.component';
 import { LoanReceiverBankComponent } from './components/loan-receiver-bank/loan-receiver-bank.component';
-import { CompareLoanComponent } from './components/compare-loan/compare-loan.component';
 import { RegistrationUserComponent } from './components/registration-user/registration-user.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
@@ -29,7 +28,6 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
         LoanComponent,
         ContainerSectionsComponent,
         LoanReceiverBankComponent,
-        CompareLoanComponent,
         RegistrationUserComponent,
 
 

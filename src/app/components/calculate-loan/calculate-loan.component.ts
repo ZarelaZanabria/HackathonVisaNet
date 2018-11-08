@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,8 +9,9 @@ import { FormGroup } from '@angular/forms';
 
 export class CalculateLoanComponent implements OnInit {
   countryForm: FormGroup;
+  // tslint:disable-next-line:max-line-length
   time = [{label: '12 MESES', value: 12}, {label: '24 MESES', value: 24}, {label: '36 MESES', value: 36}, {label: '4 AÑOS', value: 48}, {label: '5 AÑOS', value: 60}]
-
+  @Output() activeSecondStep : EventEmitter<any> = new EventEmitter<void>();;
   private timeSelector: any;
   private cash: number = 10000;
   private cashNumber: number = 1000;
@@ -42,6 +43,9 @@ export class CalculateLoanComponent implements OnInit {
     this.interest = this.cash * this.tcea * year
     this.totalToPay = this.cash + this.interest
     this.fee = this.totalToPay/this.timeSelector
+  }
+  emmitSecondStep () {
+
   }
 
 }
